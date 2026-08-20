@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - Spots Near TUP</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4ead5;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #171717;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            border-bottom: 8px solid #ff6a00;
+        }
+        header h1 {
+            color: #ff6a00;
+            font-size: 42px;
+            margin: 10px;
+            text-transform: uppercase;
+            text-shadow:
+                3px 3px 0px white,
+                6px 6px 0px black;
+        }
+        header h1:hover {
+            transform: scale(1.03);
+            text-shadow:
+                3px 3px 0px white,
+                6px 6px 0px black,
+                0 0 25px #ff6a00;
+        }
+        header p {
+            font-size: 17px;
+        }
+
+        /* NAVIGATION LINKS */
+        nav {
+            margin-top: 25px;
+        }
+        nav a {
+            display: inline-block;
+            background-color: #ff6a00;
+            color: white;
+            text-decoration: none;
+            padding: 10px 22px;
+            margin: 5px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid white;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background-color: white;
+            color: #ff6a00;
+            border-color: #ff6a00;
+            transform: translateY(-4px);
+            box-shadow: 0 0 18px #ff6a00;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 950px;
+            margin: 50px auto;
+            padding: 0 25px;
+        }
+
+        /* CONTACT CARD */
+        .contact-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            border: 4px solid #171717;
+            box-shadow: 10px 10px 0px #ff6a00;
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            color: #ff6a00;
+            font-size: 35px;
+            margin-top: 0;
+        }
+        .contact-card > p {
+            line-height: 1.7;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* CONTACT BOXES */
+        .contact-options {
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .contact-box {
+            background-color: #171717;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            border: 3px solid #ff6a00;
+            transition: 0.3s;
+        }
+        .contact-box:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                0 0 15px #ff6a00,
+                0 10px 20px rgba(0,0,0,0.3);
+        }
+        .contact-box h3 {
+            color: #ff6a00;
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        .contact-box a {
+            color: white;
+            text-decoration: none;
+            word-break: break-word;
+        }
+        .contact-box a:hover {
+            color: #ff6a00;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 70px;
+            background-color: #171717;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-top: 8px solid #ff6a00;
+        }
+        footer span {
+            color: #ff6a00;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Spots Near TUP</h1>
+        <p>Your Ultimate Guide to Food, Comfort, and Connectivity Near TUP</p>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-card">
+            <h2> Contact Guide </h2>
+            <p>
+                Know a hidden gem around TUP that deserves to be
+                featured? Have a suggestion or simply want to share
+                your experience? Get in touch!
+            </p>
+
+            <div class="contact-options">
+                <div class="contact-box">
+                    <h3>Email</h3>
+                    <p>
+                        <a href="mailto:brent.delgado.35762@gmail.com">
+                            brent.delgado.35762@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-box">
+                    <h3> Phone </h3>
+                    <p>
+                        +63 977 795 0639
+                    </p>
+                </div>
+
+                <div class="contact-box">
+                    <h3> Suggestions</h3>
+                    <p>
+                        Know a great spot near TUP?
+                        Let me know!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            © 2026
+            <span>Spots Near TUP</span>
+            • Eat • Chill • Connect
+        </p>
+    </footer>
+</body>
+</html>
