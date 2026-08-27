@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-
     <title>Contact - Spots Near TUP</title>
     <style>
         * {
             box-sizing: border-box;
         }
+
+        /* BODY */
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             background-color: #f4ead5;
             color: #222;
+            line-height: 1.6;
         }
 
         /* HEADER */
+
         header {
             background-color: #171717;
             color: white;
@@ -34,6 +38,7 @@
             text-shadow:
                 3px 3px 0px white,
                 6px 6px 0px black;
+            transition: 0.3s;
         }
         header h1:hover {
             transform: scale(1.03);
@@ -46,7 +51,7 @@
             font-size: 17px;
         }
 
-        /* NAVIGATION LINKS */
+        /* NAVIGATION */
         nav {
             margin-top: 25px;
         }
@@ -85,12 +90,24 @@
             border: 4px solid #171717;
             box-shadow: 10px 10px 0px #ff6a00;
             text-align: center;
+            transition: 0.3s;
         }
-
+        .contact-card:hover {
+            box-shadow:
+                14px 14px 0px #ff6a00,
+                0 15px 30px rgba(0, 0, 0, 0.15);
+        }
         .contact-card h2 {
             color: #ff6a00;
             font-size: 35px;
             margin-top: 0;
+            transition: 0.3s;
+        }
+        .contact-card h2:hover {
+            text-shadow:
+                0 0 5px #ff6a00,
+                0 0 15px #ff6a00,
+                0 0 25px #ff6a00;
         }
         .contact-card > p {
             line-height: 1.7;
@@ -98,34 +115,143 @@
             margin: auto;
         }
 
-        /* CONTACT BOXES */
+        /* CONTACT FORM */
+        form {
+            max-width: 700px;
+            margin: 35px auto 0;
+            text-align: left;
+        }
+        fieldset {
+            border: 3px solid #171717;
+            border-radius: 15px;
+            padding: 25px;
+
+            background-color: #fffaf2;
+        }
+        legend {
+            background-color: #171717;
+            color: #ff6a00;
+            padding: 7px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* LABELS */
+        label {
+            display: block;
+            margin-top: 17px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #171717;
+        }
+
+        /* INPUTS */
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #171717;
+            border-radius: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        /* INPUT FOCUS */
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #ff6a00;
+            box-shadow:
+                0 0 5px #ff6a00,
+                0 0 12px rgba(255, 106, 0, 0.4);
+        }
+
+        /* MESSAGE */
+        textarea {
+            min-height: 160px;
+            resize: vertical;
+        }
+
+        /* SEND BUTTON */
+        .button-container {
+            text-align: center;
+            margin-top: 25px;
+        }
+        button {
+            background-color: #ff6a00;
+            color: white;
+            border: 3px solid #171717;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #171717;
+            color: #ff6a00;
+            border-color: #ff6a00;
+            transform: translateY(-4px);
+            box-shadow:
+                0 0 10px #ff6a00,
+                0 0 20px #ff6a00;
+        }
+
+        /* KEYBOARD FOCUS */
+        button:focus {
+            outline: 3px solid #ff6a00;
+            outline-offset: 4px;
+        }
+
+        /* CONTACT OPTIONS */
         .contact-options {
             display: grid;
             grid-template-columns:
                 repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 40px;
+            gap: 15px;
+            margin-top: 45px;
         }
+
+        /* CONTACT BOX */
         .contact-box {
             background-color: #171717;
             color: white;
-            padding: 25px;
-            border-radius: 15px;
+            padding: 18px 12px;
+            border-radius: 12px;
             border: 3px solid #ff6a00;
+            box-shadow: 4px 4px 0px #ff6a00;
             transition: 0.3s;
         }
+
+        /* BOX HOVER */
         .contact-box:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow:
-                0 0 15px #ff6a00,
-                0 10px 20px rgba(0,0,0,0.3);
+                0 0 12px #ff6a00,
+                0 8px 18px rgba(0, 0, 0, 0.3);
         }
         .contact-box h3 {
             color: #ff6a00;
-            font-size: 22px;
+            font-size: 18px;
             margin-top: 0;
+            transition: 0.3s;
         }
-
+        .contact-box:hover h3 {
+            text-shadow:
+                0 0 5px #ff6a00,
+                0 0 12px #ff6a00;
+        }
+        .contact-box p {
+            font-size: 12px;
+            margin: 5px 0;
+            line-height: 1.4;
+        }
         .contact-box a {
             color: white;
             text-decoration: none;
@@ -153,9 +279,12 @@
 </head>
 
 <body>
+    <!--  HEADER -->
     <header>
         <h1>Spots Near TUP</h1>
-        <p>Your Ultimate Guide to Food, Comfort, and Connectivity Near TUP</p>
+        <p>
+            Your Ultimate Guide to Food, Comfort, and Connectivity Near TUP
+        </p>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -163,16 +292,106 @@
         </nav>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main>
         <div class="contact-card">
-            <h2> Contact Guide </h2>
+            <h2>Contact Guide</h2>
             <p>
                 Know a hidden gem around TUP that deserves to be
                 featured? Have a suggestion or simply want to share
                 your experience? Get in touch!
             </p>
 
+            <!-- CONTACT FORM -->
+            <form>
+                <fieldset>
+                    <legend>Your Details</legend>
+
+                    <!-- NAME -->
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                    >
+
+                    <!-- EMAIL -->
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+
+                    <!-- SUBJECT -->
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <select
+                        id="subject"
+                        name="subject"
+                        required
+                    >
+                        <option value="">
+                            Choose a subject
+                        </option>
+
+                        <option value="suggest-place">
+                            Suggest a Place
+                        </option>
+
+                        <option value="correct-detail">
+                            Correct a Detail
+                        </option>
+
+                        <option value="ask-question">
+                            Ask a Question
+                        </option>
+
+                        <option value="share-experience">
+                            Share an Experience
+                        </option>
+
+                        <option value="something-else">
+                            Something Else
+                        </option>
+
+                    </select>
+
+
+                    <!-- MESSAGE -->
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                    ></textarea>
+                </fieldset>
+
+                <!-- SEND BUTTON -->
+                <div class="button-container">
+                    <button type="submit">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+            <!-- THE ORIG 3 CONTACT BOXES -->
             <div class="contact-options">
+
+                <!-- EMAIL -->
                 <div class="contact-box">
                     <h3>Email</h3>
                     <p>
@@ -182,15 +401,17 @@
                     </p>
                 </div>
 
+                <!-- PHONE -->
                 <div class="contact-box">
-                    <h3> Phone </h3>
+                    <h3>Phone</h3>
                     <p>
                         +63 977 795 0639
                     </p>
                 </div>
-                
+
+                <!-- SUGGESTIONS -->
                 <div class="contact-box">
-                    <h3> Suggestions</h3>
+                    <h3>Suggestions</h3>
                     <p>
                         Know a great spot near TUP?
                         Let me know!
@@ -200,10 +421,14 @@
         </div>
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
         <p>
             © 2026
-            <span>Spots Near TUP</span>
+            <span>
+                Spots Near TUP
+            </span>
             • Eat • Chill • Connect
         </p>
     </footer>
