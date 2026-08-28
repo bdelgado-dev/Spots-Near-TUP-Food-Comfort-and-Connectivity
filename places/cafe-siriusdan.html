@@ -163,6 +163,79 @@
             border-radius: 12px;
         }
 
+        /* SUGGEST-A-PLACE FORM */
+
+        .suggest-place {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #f4ead5;
+            border: 4px solid #171717;
+            border-radius: 15px;
+        }
+        .suggest-place h3 {
+            color: #ff5c00;
+            font-size: 28px;
+            text-align: center;
+            margin-top: 0;
+        }
+        .suggest-place p {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            width: 100%;
+             padding: 12px;
+            border: 2px solid #171717;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        fieldset {
+            border: 2px solid #171717;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 8px;
+            color: #ff5c00;
+        }
+        .choice {
+            margin: 10px 0;
+        }
+        .choice label {
+            display: inline;
+            font-weight: normal;
+            margin-left: 5px;
+        }
+        .submit-button {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .submit-button button {
+            background-color: #ff5c00;
+            color: white;
+            border: 2px solid #171717;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-button button:hover {
+            background-color: #171717;
+            color: #ff5c00;
+        }
+
         /* BACK BUTTON */
 
         .back-button {
@@ -325,6 +398,97 @@
                     <img src="../cafe-siriusdan3.jpg"
                          alt="Artwork inside Cafe Siriusdan">
                 </div>
+            </div>
+
+            <!-- SUGGEST-A-PLACE FORM -->
+            <div class="suggest-place">
+                <h3>Suggest a Place</h3>
+                <p>
+                    Know a great spot near TUP? Recommend it to us!
+                </p>
+
+                <form action="#" method="post">
+
+                    <!-- PLACE NAME -->
+                    <div class="form-group">
+                        <label for="place-name">Place Name:</label>
+                        <input type="text"
+                            id="place-name"
+                            name="place-name"
+                            required>
+                    </div>
+
+                    <fieldset>
+                        <legend>What type of place is it?</legend>
+                        <div class="choice">
+                            <input type="radio"
+                                id="food"
+                                name="category"
+                                value="food"
+                                required>
+                            <label for="food">Food</label>
+                        </div>
+
+                        <div class="choice">
+                            <input type="radio"
+                                id="study"
+                                name="category"
+                                value="study">
+                            <label for="study">Study Spot</label>
+                        </div>
+
+                        <div class="choice">
+                            <input type="radio"
+                                id="outdoors"
+                                name="category"
+                                value="outdoors">
+                            <label for="outdoors">Outdoors</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>What's good about it?</legend>
+
+                        <div class="choice">
+                            <input type="checkbox"
+                                id="affordable"
+                                name="good-points"
+                                value="affordable">
+                            <label for="affordable">Affordable</label>
+                        </div>
+
+                        <div class="choice">
+                            <input type="checkbox"
+                                id="wifi"
+                                name="good-points"
+                                value="good-wifi">
+                            <label for="wifi">Good Wi-Fi</label>
+                        </div>
+
+                        <div class="choice">
+                            <input type="checkbox"
+                                id="quiet"
+                                name="good-points"
+                                value="quiet">
+                            <label for="quiet">Quiet</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- CONTACT EMAIL -->
+                    <div class="form-group">
+                        <label for="contact-email">Contact Email:</label>
+                        <input type="email"
+                            id="contact-email"
+                            name="contact-email"
+                            required>
+                    </div>
+
+                    <!-- SUBMIT -->
+                    <div class="submit-button">
+                        <button type="submit">Suggest This Place</button>
+                    </div>
+
+                </form>
             </div>
 
             <!-- BACK TO HOME -->
