@@ -1,4 +1,4 @@
-/* VARIABLES */
+/* VARIABLES*/
 
 :root {
     --brand: #ff6a00;
@@ -11,8 +11,9 @@
     --light-blue: #eef4fa;
     --blue-accent: #2e5c8a;
 
-    /* Used for transparent orange effects */
+    /* Used for transparent effects */
     --brand-rgb: 255, 106, 0;
+    --black-rgb: 0, 0, 0;
 }
 
 /* BASE STYLES */
@@ -32,7 +33,7 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
+/* HEADER*/
 
 header {
     background-color: var(--dark-ink);
@@ -108,6 +109,7 @@ main {
     padding: 0 25px;
 }
 
+
 /* SECTION TITLE */
 
 .section-title {
@@ -131,6 +133,7 @@ main {
         8px 10px 0 var(--brand);
 }
 
+
 /* PLACE ENTRY CARDS */
 
 .spots {
@@ -138,44 +141,51 @@ main {
     grid-template-columns: 1fr;
     gap: 40px;
 }
-article {
+
+
+/* Reusable place-card class */
+
+.place-card {
     background-color: var(--white);
     padding: 30px;
     border-radius: 20px;
     border: 4px solid var(--dark-ink);
     border-left: 8px solid var(--brand);
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     box-shadow: 8px 8px 0 var(--brand);
     transition: 0.35s;
 }
-article:hover {
+.place-card:hover {
     transform: translateY(-8px);
     box-shadow:
         12px 15px 0 var(--brand),
-        0 15px 30px rgba(0, 0, 0, 0.2);
+        0 15px 30px rgba(var(--black-rgb), 0.2);
 }
+
 
 /* PLACE CARD TITLES */
 
-article h3 {
+.place-card h3 {
     color: var(--brand);
     font-size: 27px;
     margin-top: 0;
     transition: 0.3s;
 }
-article:hover h3 {
+.place-card:hover h3 {
     color: var(--dark-ink);
     text-shadow:
         0 0 5px var(--brand),
         0 0 12px var(--brand);
 }
 
+
 /* PLACE CARD TEXT */
 
-article p {
+.place-card p {
     text-align: justify;
     line-height: 1.7;
 }
+
 
 /* LOCATION / ADDRESS */
 
@@ -187,6 +197,7 @@ article p {
     border-left: 5px solid var(--blue-accent);
     border-radius: 5px;
 }
+
 
 /* IMAGE GALLERY */
 
@@ -213,6 +224,7 @@ article p {
         0 0 25px rgba(var(--brand-rgb), 0.5);
 }
 
+
 /* ABOUT PAGE */
 
 .about-card {
@@ -229,8 +241,9 @@ article p {
 .about-card:hover {
     box-shadow:
         14px 16px 0 var(--brand),
-        0 15px 30px rgba(0, 0, 0, 0.2);
+        0 15px 30px rgba(var(--black-rgb), 0.2);
 }
+
 
 /* PROFILE */
 
@@ -266,6 +279,7 @@ article p {
         0 0 15px var(--brand);
 }
 
+
 /* ABOUT INFORMATION */
 
 .information {
@@ -282,6 +296,7 @@ article p {
     line-height: 1.7;
 }
 
+
 /* DETAILS */
 
 .details {
@@ -294,6 +309,7 @@ article p {
 .details strong {
     color: var(--brand);
 }
+
 
 /* CONTACT PAGE */
 
@@ -309,7 +325,7 @@ article p {
 .contact-card:hover {
     box-shadow:
         14px 14px 0 var(--brand),
-        0 15px 30px rgba(0, 0, 0, 0.15);
+        0 15px 30px rgba(var(--black-rgb), 0.15);
 }
 .contact-card h2 {
     color: var(--brand);
@@ -329,7 +345,8 @@ article p {
     margin: auto;
 }
 
-/* CONTACT FORM */
+
+/* FORMS */
 
 form {
     max-width: 700px;
@@ -357,7 +374,10 @@ label {
     font-weight: bold;
     color: var(--dark-ink);
 }
-input,
+
+/* FORM INPUTS */
+
+input:not([type="radio"]):not([type="checkbox"]),
 select,
 textarea {
     width: 100%;
@@ -388,6 +408,7 @@ textarea {
     resize: vertical;
 }
 
+
 /* SEND BUTTON */
 
 .button-container {
@@ -397,7 +418,7 @@ textarea {
 button {
     background-color: var(--brand);
     color: var(--white);
-    border: 3px solid var(--dark-ink);
+    border: none;
     padding: 12px 30px;
     border-radius: 25px;
     font-size: 16px;
@@ -408,7 +429,6 @@ button {
 button:hover {
     background-color: var(--dark-ink);
     color: var(--brand);
-    border-color: var(--brand);
     transform: translateY(-4px);
     box-shadow:
         0 0 10px var(--brand),
@@ -419,6 +439,7 @@ button:focus {
     outline-offset: 4px;
 }
 
+
 /* CONTACT OPTIONS */
 
 .contact-options {
@@ -427,6 +448,7 @@ button:focus {
     gap: 15px;
     margin-top: 45px;
 }
+
 
 /* CONTACT BOXES */
 
@@ -443,7 +465,7 @@ button:focus {
     transform: translateY(-6px);
     box-shadow:
         0 0 12px var(--brand),
-        0 8px 18px rgba(0, 0, 0, 0.3);
+        0 8px 18px rgba(var(--black-rgb), 0.3);
 }
 .contact-box h3 {
     color: var(--brand);
@@ -531,6 +553,7 @@ button:focus {
     line-height: 1.8;
     font-size: 17px;
 }
+
 .description h3 {
     color: var(--brand);
     font-size: 28px;
@@ -556,7 +579,6 @@ th {
     color: var(--brand);
     width: 30%;
 }
-
 
 /* DETAIL GALLERY */
 
@@ -584,9 +606,9 @@ th {
 .gallery-grid img:hover {
     transform: scale(1.03);
     border-color: var(--brand);
-    box-shadow: 0 0 15px var(--brand);
+    box-shadow:
+        0 0 15px var(--brand);
 }
-
 
 /* SUGGEST-A-PLACE FORM */
 
@@ -624,16 +646,20 @@ th {
     font-size: 16px;
 }
 
-/* CHOICE CONTROLS */
+/* RADIO BUTTONS AND CHECKBOXES */
 
 .choice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin: 10px 0;
 }
 .choice input[type="radio"],
 .choice input[type="checkbox"] {
     width: auto;
     padding: 0;
-    margin: 0 5px 0 0;
+    margin: 0;
+    accent-color: var(--brand);
 }
 .choice label {
     display: inline;
@@ -650,19 +676,29 @@ th {
 .submit-button button {
     background-color: var(--brand);
     color: var(--white);
-    border: 2px solid var(--dark-ink);
+    border: none;
     padding: 12px 30px;
     border-radius: 25px;
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
+    transition: 0.3s;
 }
 .submit-button button:hover {
     background-color: var(--dark-ink);
     color: var(--brand);
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 10px var(--brand),
+        0 0 20px var(--brand);
+}
+.submit-button button:focus {
+    outline: 3px solid var(--brand);
+    outline-offset: 4px;
 }
 
 /* BACK BUTTON */
+
 .back-button {
     text-align: center;
     margin-top: 40px;
