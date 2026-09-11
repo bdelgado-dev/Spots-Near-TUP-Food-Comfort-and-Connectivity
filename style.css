@@ -167,11 +167,30 @@ main {
 /* PLACE ENTRY CARDS */
 
 .spots {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
+/* Reusable place-card class */
+
+.place-card {
+    flex: 1 1 240px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    border: 4px solid var(--dark-ink);
+    border-left: 8px solid var(--brand);
+    margin-bottom: 0;
+    box-shadow: 8px 8px 0 var(--brand);
+    transition: 0.35s;
+}
+.place-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        12px 15px 0 var(--brand),
+        0 15px 30px rgba(var(--black-rgb), 0.2);
+}
 
 /* Reusable place-card class */
 
@@ -753,144 +772,6 @@ th {
         0 0 10px var(--brand),
         0 0 20px var(--brand);
 }
-
-
-/* ADDITIONAL DESIGNS*/
-
-
-/* HEADER ENTRANCE */
-
-.site-header {
-    animation: headerEnter 0.8s ease-out;
-}
-
-
-/* SUBTLE ORANGE LIGHT MOVING THROUGH HEADER */
-
-.site-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -30%;
-    width: 25%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(var(--brand-rgb), 0.12),
-        transparent
-    );
-    transform: skewX(-20deg);
-    animation: headerSweep 7s ease-in-out infinite;
-    pointer-events: none;
-}
-
-
-/* MAKE HEADER CONTENT STAY ABOVE THE EFFECT */
-
-.header-brand,
-.site-header nav {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* GUIDE TITLE */
-
-.site-header h1 {
-    position: relative;
-    letter-spacing: 1px;
-    animation: titleEnter 0.9s ease-out;
-}
-
-
-/* LITTLE ORANGE GUIDE-LIKE LINE UNDER TITLE */
-
-.site-header h1::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 4px;
-    background-color: var(--brand);
-    margin-top: 5px;
-    border-radius: 5px;
-
-    box-shadow:
-        0 0 8px var(--brand),
-        0 0 15px rgba(var(--brand-rgb), 0.5);
-
-    animation: titleLine 0.8s ease-out 0.6s forwards;
-}
-
-
-/* NAV BUTTON ENTRANCE */
-
-.site-header nav li:nth-child(1) {
-    animation: navEnter 0.5s ease-out 0.2s both;
-}
-
-.site-header nav li:nth-child(2) {
-    animation: navEnter 0.5s ease-out 0.3s both;
-}
-
-.site-header nav li:nth-child(3) {
-    animation: navEnter 0.5s ease-out 0.4s both;
-}
-
-.site-header nav li:nth-child(4) {
-    animation: navEnter 0.5s ease-out 0.5s both;
-}
-
-.site-header nav li:nth-child(5) {
-    animation: navEnter 0.5s ease-out 0.6s both;
-}
-
-
-/* NAV BUTTON RESTING AURA */
-
-.site-header nav a {
-    box-shadow:
-        0 0 6px rgba(var(--brand-rgb), 0.25);
-
-    position: relative;
-    overflow: hidden;
-}
-
-
-/* SMALL SHINE THAT PASSES THROUGH BUTTON */
-
-.site-header nav a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.35),
-        transparent
-    );
-
-    transform: skewX(-20deg);
-}
-
-
-/* BUTTON SHINE ON HOVER */
-
-.site-header nav a:hover::before {
-    animation: buttonShine 0.6s ease;
-}
-
-
-/* BUTTON PRESS EFFECT */
-
-.site-header nav a:active {
-    transform: translateY(0) scale(0.96);
-}
-
 
 /* FOOTER */
 
