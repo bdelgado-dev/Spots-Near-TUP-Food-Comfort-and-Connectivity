@@ -15,14 +15,16 @@
     --black-rgb: 0, 0, 0;
 }
 
-/* BASE STYLES MOBILE FIRST*/
+/* BASE STYLES - MOBILE FIRST */
 
 * {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -49,16 +51,20 @@ body {
 header {
     grid-area: masthead;
 }
+
 main {
     grid-area: main;
     min-width: 0;
 }
+
 aside {
     grid-area: side;
 }
+
 footer {
     grid-area: foot;
 }
+
 img {
     max-width: 100%;
 }
@@ -72,7 +78,7 @@ img {
     align-items: center;
     background-color: var(--dark-ink);
     color: var(--white);
-    padding: 25px 15px;
+    padding: 22px 12px;
     border-bottom: 8px solid var(--brand);
     position: relative;
     overflow: hidden;
@@ -81,6 +87,7 @@ img {
         0 0 30px rgba(var(--brand-rgb), 0.15);
     transition: 0.3s;
 }
+
 .site-header:hover {
     box-shadow:
         0 0 15px rgba(var(--brand-rgb), 0.4),
@@ -93,19 +100,22 @@ img {
     width: 100%;
     text-align: center;
 }
+
 .site-header h1 {
     color: var(--brand);
     margin: 5px 0 12px;
-    font-size: clamp(30px, 8vw, 50px);
+    font-size: clamp(28px, 9vw, 45px);
     line-height: 1.1;
     transition: 0.3s;
 }
+
 .site-header h1:hover {
     transform: scale(1.03);
     text-shadow:
         0 0 5px var(--brand),
         0 0 15px var(--brand);
 }
+
 .site-header p {
     font-size: 14px;
     line-height: 1.4;
@@ -119,6 +129,7 @@ img {
     width: 100%;
     margin-top: 20px;
 }
+
 .site-header nav ul {
     display: flex;
     justify-content: center;
@@ -128,18 +139,20 @@ img {
     padding: 0;
     margin: 0;
 }
+
 .site-header nav a {
     display: block;
     background-color: var(--brand);
     color: var(--white);
     text-decoration: none;
-    padding: 8px 14px;
+    padding: 7px 14px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     border: 2px solid var(--white);
     transition: 0.3s;
 }
+
 .site-header nav a:hover {
     background-color: var(--white);
     color: var(--brand);
@@ -156,27 +169,33 @@ img {
     background-color: var(--dark-ink);
     color: var(--white);
     padding: 20px;
-    margin: 15px;
+    margin: 10px 12px 25px;
     border: 3px solid var(--brand);
     border-radius: 15px;
     align-self: start;
 }
+
 .guide-sidebar h2,
 .guide-sidebar h3 {
     color: var(--brand);
 }
+
 .guide-sidebar h2 {
     margin-top: 0;
 }
+
 .guide-sidebar h3 {
     margin-top: 25px;
 }
+
 .guide-sidebar p {
     font-size: 14px;
 }
+
 .guide-sidebar ul {
     padding-left: 20px;
 }
+
 .guide-sidebar li {
     margin-bottom: 8px;
 }
@@ -188,7 +207,7 @@ main {
     max-width: 1050px;
     min-width: 0;
     margin: 25px auto;
-    padding: 0 15px;
+    padding: 0 12px;
 }
 
 /* SECTION TITLE */
@@ -201,6 +220,7 @@ main {
     text-align: center;
     margin-bottom: 25px;
 }
+
 .section-title h2 {
     display: inline-block;
     max-width: 100%;
@@ -214,6 +234,7 @@ main {
     box-shadow: 5px 5px 0 var(--brand);
     transition: 0.3s;
 }
+
 .section-title h2:hover {
     transform: translateY(-5px);
     box-shadow: 8px 10px 0 var(--brand);
@@ -226,8 +247,10 @@ main {
     flex-wrap: wrap;
     gap: 24px;
 }
+
 .place-card {
-    flex: 1 1 240px;
+    width: 100%;
+    flex: 1 1 100%;
     min-width: 0;
     background-color: var(--white);
     padding: 20px;
@@ -238,6 +261,7 @@ main {
     box-shadow: 8px 8px 0 var(--brand);
     transition: 0.35s;
 }
+
 .place-card:hover {
     transform: translateY(-8px);
     box-shadow:
@@ -254,6 +278,7 @@ main {
     margin-top: 0;
     transition: 0.3s;
 }
+
 .place-card:hover h3 {
     color: var(--dark-ink);
     text-shadow:
@@ -280,11 +305,11 @@ main {
     border-radius: 5px;
 }
 
-/* IMAGE GALLERY */
+/* HOME PAGE IMAGE GALLERY */
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 12px;
     width: 100%;
     max-width: 100%;
@@ -295,23 +320,22 @@ main {
 .gallery img {
     display: block;
     width: 100%;
+    height: auto;
     max-width: 100%;
-    height: 180px;
     object-fit: cover;
     border: 3px solid var(--dark-ink);
     border-radius: 10px;
     min-width: 0;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     border-color: var(--brand);
-    box-shadow:
-        0 0 15px var(--brand);
+    box-shadow: 0 0 15px var(--brand);
 }
 
-/* CAFE SIRIUSDAN DETAIL PAGE */
+/* CAFE SIRIUSDAN DETAIL GALLERY */
 
 .gallery-section {
     width: 100%;
@@ -319,11 +343,13 @@ main {
     min-width: 0;
     margin-top: 35px;
 }
+
 .gallery-section h3 {
     color: var(--brand);
     font-size: 25px;
     text-align: center;
 }
+
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -332,6 +358,7 @@ main {
     max-width: 100%;
     min-width: 0;
 }
+
 .gallery-grid img {
     display: block;
     width: 100%;
@@ -343,6 +370,7 @@ main {
     min-width: 0;
     transition: 0.4s;
 }
+
 .gallery-grid img:hover {
     transform: scale(1.03);
     border-color: var(--brand);
@@ -364,6 +392,7 @@ main {
     box-shadow: 10px 10px 0 var(--brand);
     transition: 0.3s;
 }
+
 .about-card:hover {
     box-shadow:
         14px 16px 0 var(--brand),
@@ -376,6 +405,7 @@ main {
     text-align: center;
     width: 100%;
 }
+
 .profile img {
     width: 100%;
     max-width: 230px;
@@ -385,6 +415,7 @@ main {
     border-radius: 15px;
     transition: 0.4s;
 }
+
 .profile img:hover {
     transform: scale(1.05);
     border-color: var(--brand);
@@ -392,12 +423,14 @@ main {
         0 0 15px var(--brand),
         0 0 30px rgba(var(--brand-rgb), 0.5);
 }
+
 .profile h2 {
     color: var(--brand);
     font-size: 26px;
     line-height: 1.3;
     transition: 0.3s;
 }
+
 .profile h2:hover {
     transform: scale(1.05);
     text-shadow:
@@ -412,10 +445,12 @@ main {
     border-top: 5px solid var(--brand);
     padding-top: 20px;
 }
+
 .information h2 {
     font-size: 26px;
     margin-top: 0;
 }
+
 .information p {
     text-align: left;
     line-height: 1.7;
@@ -430,6 +465,7 @@ main {
     border-radius: 12px;
     margin-bottom: 20px;
 }
+
 .details strong {
     color: var(--brand);
 }
@@ -445,17 +481,20 @@ main {
     text-align: center;
     transition: 0.3s;
 }
+
 .contact-card:hover {
     box-shadow:
         14px 14px 0 var(--brand),
         0 15px 30px rgba(var(--black-rgb), 0.15);
 }
+
 .contact-card h2 {
     color: var(--brand);
     font-size: 28px;
     line-height: 1.3;
     margin-top: 0;
 }
+
 .contact-card > p {
     line-height: 1.7;
     max-width: 650px;
@@ -470,6 +509,7 @@ form {
     margin: 30px auto 0;
     text-align: left;
 }
+
 fieldset {
     border: 3px solid var(--dark-ink);
     border-radius: 15px;
@@ -477,6 +517,7 @@ fieldset {
     background-color: var(--light-cream);
     min-width: 0;
 }
+
 legend {
     background-color: var(--dark-ink);
     color: var(--brand);
@@ -485,6 +526,7 @@ legend {
     font-weight: bold;
     text-transform: uppercase;
 }
+
 label {
     display: block;
     margin-top: 15px;
@@ -509,6 +551,7 @@ textarea {
     color: var(--dark-ink);
     transition: 0.3s;
 }
+
 input:focus,
 select:focus,
 textarea:focus {
@@ -519,6 +562,7 @@ textarea:focus {
         0 0 5px var(--brand),
         0 0 12px rgba(var(--brand-rgb), 0.4);
 }
+
 textarea {
     min-height: 160px;
     resize: vertical;
@@ -528,9 +572,9 @@ textarea {
 
 .button-container {
     text-align: center;
-
     margin-top: 25px;
 }
+
 button {
     width: 100%;
     max-width: 300px;
@@ -544,6 +588,7 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
+
 button:hover {
     background-color: var(--dark-ink);
     color: var(--brand);
@@ -552,6 +597,7 @@ button:hover {
         0 0 10px var(--brand),
         0 0 20px var(--brand);
 }
+
 button:focus {
     outline: 3px solid var(--brand);
     outline-offset: 4px;
@@ -565,6 +611,7 @@ button:focus {
     gap: 15px;
     margin-top: 35px;
 }
+
 .contact-box {
     background-color: var(--dark-ink);
     color: var(--white);
@@ -574,27 +621,32 @@ button:focus {
     box-shadow: 4px 4px 0 var(--brand);
     transition: 0.3s;
 }
+
 .contact-box:hover {
     transform: translateY(-6px);
     box-shadow:
         0 0 12px var(--brand),
         0 8px 18px rgba(var(--black-rgb), 0.3);
 }
+
 .contact-box h3 {
     color: var(--brand);
     font-size: 18px;
     margin-top: 0;
 }
+
 .contact-box p {
     font-size: 12px;
     margin: 5px 0;
     line-height: 1.4;
 }
+
 .contact-box a {
     color: var(--white);
     text-decoration: none;
     word-break: break-word;
 }
+
 .contact-box a:hover {
     color: var(--brand);
 }
@@ -623,6 +675,7 @@ button:focus {
     text-transform: uppercase;
     margin-top: 0;
 }
+
 .place-page .location {
     text-align: center;
     font-weight: bold;
@@ -639,6 +692,7 @@ button:focus {
     text-align: center;
     margin: 25px 0;
 }
+
 .main-photo img {
     width: 100%;
     max-width: 750px;
@@ -649,6 +703,7 @@ button:focus {
     border-radius: 15px;
     transition: 0.4s;
 }
+
 .main-photo img:hover {
     transform: scale(1.03);
     border-color: var(--brand);
@@ -663,6 +718,7 @@ button:focus {
     line-height: 1.8;
     font-size: 16px;
 }
+
 .description h3 {
     color: var(--brand);
     font-size: 24px;
@@ -674,10 +730,12 @@ button:focus {
     margin-top: 30px;
     overflow-x: auto;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
 }
+
 th,
 td {
     border: 1px solid var(--dark-ink);
@@ -685,40 +743,11 @@ td {
     text-align: left;
     word-break: break-word;
 }
+
 th {
     background-color: var(--dark-ink);
     color: var(--brand);
     width: 30%;
-}
-
-/* DETAIL GALLERY */
-
-.gallery-section {
-    margin-top: 35px;
-}
-.gallery-section h3 {
-    color: var(--brand);
-    font-size: 25px;
-    text-align: center;
-}
-.gallery-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
-.gallery-grid img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border: 4px solid var(--dark-ink);
-    border-radius: 12px;
-    transition: 0.4s;
-}
-.gallery-grid img:hover {
-    transform: scale(1.03);
-    border-color: var(--brand);
-    box-shadow:
-        0 0 15px var(--brand);
 }
 
 /* SUGGEST-A-PLACE FORM */
@@ -730,24 +759,29 @@ th {
     border: 4px solid var(--dark-ink);
     border-radius: 15px;
 }
+
 .suggest-place h3 {
     color: var(--brand);
     font-size: 25px;
     text-align: center;
     margin-top: 0;
 }
+
 .suggest-place p {
     text-align: center;
     margin-bottom: 25px;
 }
+
 .form-group {
     margin-bottom: 20px;
 }
+
 .form-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
 }
+
 .form-group input[type="text"],
 .form-group input[type="email"] {
     width: 100%;
@@ -765,6 +799,7 @@ th {
     gap: 8px;
     margin: 10px 0;
 }
+
 .choice input[type="radio"],
 .choice input[type="checkbox"] {
     width: auto;
@@ -773,6 +808,7 @@ th {
     flex-shrink: 0;
     accent-color: var(--brand);
 }
+
 .choice label {
     display: inline;
     font-weight: normal;
@@ -785,6 +821,7 @@ th {
     text-align: center;
     margin-top: 25px;
 }
+
 .submit-button button {
     width: 100%;
     max-width: 300px;
@@ -798,6 +835,7 @@ th {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .submit-button button:hover {
     background-color: var(--dark-ink);
     color: var(--brand);
@@ -813,6 +851,7 @@ th {
     text-align: center;
     margin-top: 30px;
 }
+
 .back-button a {
     display: inline-block;
     background-color: var(--brand);
@@ -824,6 +863,7 @@ th {
     font-weight: bold;
     transition: 0.3s;
 }
+
 .back-button a:hover {
     background-color: var(--dark-ink);
     color: var(--brand);
@@ -851,7 +891,12 @@ footer span {
     font-weight: bold;
 }
 
+/* TABLET AND DESKTOP */
+
+@media (min-width: 700px) {
+
     /* PAGE SKELETON */
+
     body {
         grid-template-columns: 220px 1fr;
         grid-template-areas:
@@ -869,24 +914,30 @@ footer span {
         align-items: center;
         padding: 30px 40px;
     }
+
     .header-brand {
         width: auto;
         text-align: left;
     }
+
     .site-header h1 {
         font-size: 50px;
     }
+
     .site-header p {
         max-width: none;
         font-size: 16px;
     }
+
     .site-header nav {
         width: auto;
         margin-top: 0;
     }
+
     .site-header nav ul {
         gap: 20px;
     }
+
     .site-header nav a {
         padding: 10px 20px;
         font-size: 16px;
@@ -911,6 +962,7 @@ footer span {
         height: 180px;
         margin-bottom: 40px;
     }
+
     .section-title h2 {
         font-size: 28px;
         padding: 12px 30px;
@@ -921,11 +973,23 @@ footer span {
     .place-card {
         padding: 30px;
     }
+
     .place-card h3 {
         font-size: 27px;
     }
+
     .place-card p {
         text-align: justify;
+    }
+
+    /* HOME PAGE GALLERY */
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery img {
+        height: 200px;
     }
 
     /* ABOUT */
@@ -936,11 +1000,12 @@ footer span {
         gap: 45px;
         padding: 40px;
     }
+
     .profile {
         width: 300px;
-
         flex-shrink: 0;
     }
+
     .information {
         flex: 1;
         width: auto;
@@ -955,9 +1020,11 @@ footer span {
     .contact-card {
         padding: 40px;
     }
+
     .contact-card h2 {
         font-size: 35px;
     }
+
     .contact-options {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -967,12 +1034,15 @@ footer span {
     .place-page {
         padding: 40px;
     }
+
     .place-page h2 {
         font-size: 38px;
     }
+
     .description {
         font-size: 17px;
     }
+
     .description h3 {
         font-size: 28px;
     }
@@ -999,6 +1069,7 @@ footer span {
 /* LARGE DESKTOP */
 
 @media (min-width: 1100px) {
+
     .gallery-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
