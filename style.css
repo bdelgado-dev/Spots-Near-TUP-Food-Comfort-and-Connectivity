@@ -31,6 +31,31 @@ body {
     background-color: var(--light-background);
     color: var(--dark-ink);
     line-height: 1.6;
+
+    /* PAGE SKELETON */
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-areas:
+        "masthead masthead"
+        "side     main"
+        "foot     foot";
+    gap: 16px;
+}
+
+/* PAGE GRID AREAS */
+
+header {
+    grid-area: masthead;
+}
+aside {
+    grid-area: side;
+}
+main {
+    grid-area: main;
+    min-width: 0;
+}
+footer {
+    grid-area: foot;
 }
 
 /* HEADER */
@@ -130,12 +155,39 @@ body {
         0 0 30px rgba(var(--brand-rgb), 0.6);
 }
 
+/* SIDEBAR */
+
+.guide-sidebar {
+    background-color: var(--dark-ink);
+    color: var(--white);
+    padding: 25px 20px;
+    margin: 20px 0 20px 20px;
+    border: 3px solid var(--brand);
+    border-radius: 15px;
+    align-self: start;
+}
+.guide-sidebar h2,
+.guide-sidebar h3 {
+    color: var(--brand);
+}
+.guide-sidebar h2 {
+    margin-top: 0;
+}
+.guide-sidebar ul {
+    padding-left: 20px;
+}
+.guide-sidebar li {
+    margin-bottom: 8px;
+}
+
 /* MAIN LAYOUT */
 
 main {
+    width: 100%;
     max-width: 1050px;
     margin: 50px auto;
     padding: 0 25px;
+    min-width: 0;
 }
 
 /* SECTION TITLE */
@@ -777,7 +829,7 @@ th {
 
 footer {
     margin-top: 70px;
-    background-color: var(--dark-ink);
+   background-color: var(--dark-ink);
     color: var(--white);
     text-align: center;
     padding: 30px;
