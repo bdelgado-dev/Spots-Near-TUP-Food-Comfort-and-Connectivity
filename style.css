@@ -223,6 +223,7 @@ main {
 
 .section-title h2 {
     display: inline-block;
+    width: 40%;
     max-width: 100%;
     background-color: var(--dark-ink);
     color: var(--brand);
