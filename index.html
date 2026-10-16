@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
+<script src="script.js"></script>
+
 <body>
     <!-- HEADER -->
     <header class="site-header">
@@ -48,10 +50,14 @@
     <!-- MAIN CONTENT -->
     <main>
         <!-- TOP 3 PICKS -->
+
         <div class="section-title">
             <h2>My Top 3 Picks</h2>
         </div>
 
+        <p class="place-count">
+            Total Places Reviewed: <span id="place-count">0</span>
+        </p>
 
         <section class="spots">
             <!-- TOP 1: KADILIMAN -->
@@ -178,10 +184,8 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>
-            © 2026
-            <span>Spots Near TUP</span>
-            • Eat • Chill • Connect
+        <p id="copyright">
+            © 2026 Spots Near TUP • Eat • Chill • Connect
         </p>
     </footer>
 
